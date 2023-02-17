@@ -9,3 +9,7 @@
 // 3st Part (Last Part) - Minor Fixes (Optional)
 // 2nd Part - Recommended Bug Fix (Security Bugs)
 // 1st Part - Major and Breaking update
+
+// ^4.18.2 - | 4.18.2 to 5.0.0 | -> Lock major and breaking update
+
+// ~4.18.2 -> only changes minor fixes
