@@ -1,0 +1,24 @@
+user -> (if something went wrong response is returned directle to user) middleware -> function (app.get) - res -> user
+
+Middleware is a function that runs every req, res
+
+Single code can have multiple middleware
+
+Defination ==> these are functions that have access to the req and res object and the next 
+               middleware function in the application req-res cycle
+
+
+Middleware function can perform the following tasks:
+
+-> Execute the code
+-> Make changes to req and res objects
+-> End the req-res cycle
+-> Call the next middleware function in the stack
+
+
+Example:
+
+app.use((req, res, next) => {
+    console.log("Hello from middleware 1");
+    next();
+})
