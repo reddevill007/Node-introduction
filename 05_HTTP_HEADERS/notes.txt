@@ -1,0 +1,13 @@
+HTTP Headers are an important part of API req and res as they represent the meta-data associated with the API req and res.
+
+Headers carry information for the req and res body.
+
+Example:
+{       
+  ':scheme': 'http',
+  ':authority': 'localhost:8000',
+  ':path': '/',
+  ':method': 'GET'
+}
+
+** Always add X to custom headers ** -> Good Practice
