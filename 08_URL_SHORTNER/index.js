@@ -1,9 +1,12 @@
 const express = require("express");
 const path = require("path");
 const { connectDB } = require("./connection.js");
+
+const URL = require("./models/url.js");
+
 const urlRoute = require("./routes/url.js");
 const staticRoute = require("./routes/staticRouter.js");
-const URL = require("./models/url.js");
+const userRoute = require("./routes/user.js");
 
 const PROT = 8001;
 const app = express();
@@ -17,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/url", urlRoute);
+app.use("/user", userRoute);
 app.use("/", staticRoute);
 
 app.get("/url/:shortId", async (req, res) => {
